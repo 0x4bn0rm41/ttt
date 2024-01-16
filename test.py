@@ -10,9 +10,7 @@ def index():
 	s = ''
 	
 	for x in data:
-		s+=x+'<br>'
-
-
+		s+=str(x)+'<br>'
 	return s
 
 
