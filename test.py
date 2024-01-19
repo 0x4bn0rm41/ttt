@@ -1,5 +1,5 @@
 from flask import Flask, make_response, request
-
+import requests
 
 app = Flask(__name__)
 
@@ -11,7 +11,8 @@ def index():
 	
 	for x in data:
 		s+=str(x)+'<br>'
-	return s
+	
+	return s+requests.get('https://icanhazip.com/').text
 
 
 
